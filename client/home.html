@@ -92,8 +92,8 @@
         <label class="l-3" for="">Supplier</label> 
         <Select name="supplier">
             <option value="" disabled selected hidden>Select the Supplier</option>
-            <option value="">#######</option>
-            <option value="">#######</option>
+            <option value="chalana">chalana</option>
+            <option value="buddhila">buddhila</option>
         </Select>
         <h3 class="topic-1">Items</h3>
         <div class="item-table">
@@ -114,7 +114,7 @@
             </div>
         </div>
         <div class="add-btn">
-        <a href="../server/order.php"><img src="../img/add.png" alt=""></a>
+        <img src="../img/add.png" alt="" onclick="item();">
         <h5>Add Item</h5>
         </div>
         <label class="a-1" for="">Buyer</label> <input type="text" name="bname" placeholder="Type Buyer Name"> <br>
@@ -130,7 +130,21 @@
         <p>If you have any question about this purchase order, Please contact <br>
             Saman Perera , +94 768 9875 , samanp.fineline@gmail.com</p>
         </div>
+        
       </div>
+      <div class="itemadd" id="itemadd">
+        <h1>Add Item</h1>
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Unit Price</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
       <!-- ```````````````````````````````````` page3 ````````````````````````````````````-->
       <div class="page3" id="page3">
         <h1 class="head-line">View Invoice</h1>

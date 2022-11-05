@@ -67,3 +67,14 @@ function view5()
 	display_back4.style.display ="none";
     display_back5.style.display ="flex";
 }
+
+
+function item()
+{
+	var display_back2 = document.getElementById("itemadd");
+	var display_back1 = document.getElementById("page2");
+	
+	display_back2.style.display = "block";
+	display_back1.style.display ="none";
+	
+}

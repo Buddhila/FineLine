@@ -22,7 +22,7 @@ include_once './Db.php';
 					if(mysqli_query($con,$sql))
 					{
 						echo "file updated Sucessfully";
-					  	header('location:../client/index.html');
+					  	header('location:../client/home.html');
 					} else {
 						echo (mysqli_error($con));
 					}

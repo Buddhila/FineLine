@@ -417,6 +417,36 @@ letter-spacing: 0em;
     margin-left:5vw;
     font-size: 1.5vh;
 }
+
+.itemadd
+{
+    display:block;
+    justify-content:center;
+
+}
+.itemadd table
+{
+    width:75vw;
+    border-style: solid;
+    border-color: black;
+    margin-top:5vh;
+    margin-left: 2vw;
+    margin-right:2vw;
+}
+.itemadd th
+{
+    background-color:black;
+    color: white;
+    padding-top:1vh;
+    padding-left:2vw;
+    padding-right:2vw;
+    padding-bottom:1vh;
+    font-size:20px;
+}
+.itemadd td
+{
+    
+}
 .page3
 {
     width:75vw;
