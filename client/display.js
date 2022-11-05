@@ -35,7 +35,7 @@ function view3()
     var display_back5 = document.getElementById("page5");
 	display_back1.style.display = "none";
 	display_back2.style.display ="none";
-	display_back3.style.display ="flex";
+	display_back3.style.display ="block";
 	display_back4.style.display ="none";
     display_back5.style.display ="none";
 }
@@ -50,7 +50,7 @@ function view4()
 	display_back1.style.display = "none";
 	display_back2.style.display ="none";
 	display_back3.style.display ="none";
-	display_back4.style.display ="flex";
+	display_back4.style.display ="block";
     display_back5.style.display ="none";
 }
 

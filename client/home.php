@@ -1,55 +1,57 @@
 <?php include_once('../server/Db.php') ?>
 <html>
-    <head>
-        <title>FineLine | Construction Company</title>
-        <link rel="stylesheet" href="./style.css">
-        <script type="text/javascript" src="./display.js"	></script>
-    </head>
-    <body>
-        <div class="body">
-    <div class="header">
-        <h1>FineLine</h1>
-        <img src="../img/logo.png" alt="logo" class="img-1">
-        <div class="button-list">
-        <button onclick="view1();">Purchase Order</button> <br>
-        <button onclick="view2();">Purchase History</button> <br>
-        <button onclick="view3();">View Invoice</button> <br>
-        <button onclick="view4();">Create Credit Note</button> <br>
-        <button onclick="view5();">Procedure and policy</button> <br>
+
+<head>
+    <title>FineLine | Construction Company</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./display.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">
+            <h1>FineLine</h1>
+            <img src="../img/logo.png" alt="logo" class="img-1">
+            <div class="button-list">
+                <button onclick="view1();">Purchase Order</button> <br>
+                <button onclick="view2();">Purchase History</button> <br>
+                <button onclick="view3();">View Invoice</button> <br>
+                <button onclick="view4();">Create Credit Note</button> <br>
+                <button onclick="view5();">Procedure and policy</button> <br>
+            </div>
         </div>
-    </div>
-    <div class="pages">
-        <!-- ```````````````````````````````````` page1 ````````````````````````````````````-->
-      <div class="page1" id="page1">
-        <h1 class="head-line">Purchase History</h1>
-        <table class="history" border="1">
-            <tr>
-                <th>Order Referance</th>
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <th>Qty</th>
-                <th>Total Price (Rs)</th>
-                <th>Status</th>
-                <th>Update</th>
-            </tr>
-            <tr>
-                <td>REF0001</td>
-                <td>Cement <br>
-                    melt
-                </td>
-                <td>5 <br>
-                    6
-                </td>
-                <td>33500</td>
-                <td>Pending</td>
-                <td><button class="e-btn">Edit</button></td>
+        <div class="pages">
+            <!-- ```````````````````````````````````` page1 ````````````````````````````````````-->
+            <div class="page1" id="page1">
+                <h1 class="head-line">Purchase History</h1>
+                <table class="history" border="1">
+                    <tr>
+                        <th>Order Referance</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>Qty</th>
+                        <th>Total Price (Rs)</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                    </tr>
+                    <tr>
+                        <td>REF0001</td>
+                        <td>Cement <br>
+                            melt
+                        </td>
+                        <td>5 <br>
+                            6
+                        </td>
+                        <td>33500</td>
+                        <td>Pending</td>
+                        <td><button class="e-btn">Edit</button></td>
 
 
 
 
 
-            </tr>
-        </table>
-        <!-- <div class="history">
+                    </tr>
+                </table>
+                <!-- <div class="history">
         <div class="col-1">
            <h3>Order Referance</h3> 
            <p>REF0001</p>
@@ -75,7 +77,7 @@
             <button class="e-btn">Edit</button>
         </div>
         </div> -->
-      </div> 
+            </div>
 
       <!-- ```````````````````````````````````` page2 ````````````````````````````````````-->
       <div class="page2" id="page2">
@@ -93,8 +95,8 @@
         <label class="l-3" for="">Supplier</label> 
         <Select name="supplier">
             <option value="" disabled selected hidden>Select the Supplier</option>
-            <option value="chalana">chalana</option>
-            <option value="buddhila">buddhila</option>
+            <option value="">#######</option>
+            <option value="">#######</option>
         </Select>
         <h3 class="topic-1">Items</h3>
         <div class="item-table">
@@ -115,7 +117,7 @@
             </div>
         </div>
         <div class="add-btn">
-        <img src="../img/add.png" alt="" onclick="item();">
+        <a href="../server/order.php"><img src="../img/add.png" alt=""></a>
         <h5>Add Item</h5>
         </div>
         <label class="a-1" for="">Buyer</label> <input type="text" name="bname" placeholder="Type Buyer Name"> <br>
@@ -131,75 +133,52 @@
         <p>If you have any question about this purchase order, Please contact <br>
             Saman Perera , +94 768 9875 , samanp.fineline@gmail.com</p>
         </div>
-        
       </div>
       <div class="itemadd" id="itemadd">
         <h1>Add Item</h1>
-        
         <table>
             <tr>
                 <th>Item Name</th>
                 <th>Unit Price</th>
             </tr>
-            
-            <?php
-
-            $sql =" SELECT * FROM `item` ";
-        
-            $result=mysqli_query($con,$sql);
-        
-            if(mysqli_num_rows($result)>0)
-            {
-                while($row = mysqli_fetch_assoc($result))
-                {
-                    echo"
-                    <tr>
-                <td>".$row["item_name"]."</td>
-                <td>".$row["unite_price"]."</td> 
-                </tr>";
-                }}
-                ?>
-            
-
-            
-        </table> 
-        <div class="form-1" >
-        <form action="../server/add_item.php" >
-                <label for="">item 1</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                    <br>
-                <label for="">item 2</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                <br>
-                <label for="">item 3</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                <br>
-                <label for="">item 4</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                <br>
-                <label for="">item 5</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                <br>
-                <label for="">item 6</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="">Qty</label> <input type="number" min="1" >
-                <br>
-                <button name="btn-itm" class="btn-itm">Submit</button>
-            </form>
-            </div>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
       <!-- ```````````````````````````````````` page3 ````````````````````````````````````-->
       <div class="page3" id="page3">
         <h1 class="head-line">View Invoice</h1>
+        <div class="invoice">
+            <table>
+                <tr>
+                    <th>Order Referance</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Qty</th>
+                    <th>Total Price (Rs)</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                </tr>
+            </table>
+        </div>
+
       </div>
       <!-- ```````````````````````````````````` page4 ````````````````````````````````````-->
       <div class="page4" id="page4">
         <h1 class="head-line">Create Credit Note</h1>
+        <div class="note">
+            <table>
+                <tr>
+                    <th>Order Referance</th>
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;Items&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                    <th>Qty</th>
+                    <th>Total Price (Rs)</th>
+                    <th>Status</th>
+                    <th>Update</th>
+                </tr>
+            </table>
+        </div>
       </div>
       <!-- ```````````````````````````````````` page5 ````````````````````````````````````-->
       <div class="page5" id="page5">
@@ -207,6 +186,6 @@
         
       </div>
     </div>
-</div>
-    </body>
+</body>
+
 </html>
