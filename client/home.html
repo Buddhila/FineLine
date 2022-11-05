@@ -78,113 +78,74 @@
         </div> -->
             </div>
 
-            <!-- ```````````````````````````````````` page2 ````````````````````````````````````-->
-            <div class="page2" id="page2">
-                <h1 class="head-line">Purchase Order</h1>
-                <div class="details">
-                    <p>Fineline (Pvt)Ltd <br>
-                        Nawala Road, Nugegoda <br>
-                        Phone : +94 112 5635 <br>
-                        E-mail : fineline@gmail.com <br>
-                        Website : www.fineline.com</p>
-                </div>
-                <form action="../server/order.php" method="post" class="form-1">
-                    <label class="l-1" for="">Referance No</label> <input type="text" name="refnum"
-                        placeholder="REF0000"> <br>
-                    <label class="l-2" for="">Site Name</label> <input type="text" name="sitename"
-                        placeholder="Type Site Name"> <br>
-                    <label class="l-3" for="">Supplier</label>
-                    <Select name="supplier">
-                        <option value="" disabled selected hidden>Select the Supplier</option>
-                        <option value="">#######</option>
-                        <option value="">#######</option>
-                    </Select>
-                    <h3 class="topic-1">Items</h3>
-                    <div class="item-table">
-                        <div class="item-name">
-                            <h4>Item</h4>
-                            <p>Cement</p>
-                            <p>Cement</p>
-                        </div>
-                        <div class="item-q">
-                            <h4>Qty</h4>
-                            <p>5</p>
-                            <p>5</p>
-                        </div>
-                        <div class="item-unitprice">
-                            <h4>Unit Price(Rs)</h4>
-                            <p>1100</p>
-                            <p>1100</p>
-                        </div>
-                    </div>
-                    <div class="add-btn">
-                        <a href="../server/order.php"><img src="../img/add.png" alt=""></a>
-                        <h5>Add Item</h5>
-                    </div>
-                    <label class="a-1" for="">Buyer</label> <input type="text" name="bname"
-                        placeholder="Type Buyer Name"> <br>
-                    <label class="a-2" for="">E-mail</label> <input type="email" name="email"
-                        placeholder="fineline@gmail.com"><br>
-                    <label class="a-3" for="">Address</label> <input type="text" name="Address"
-                        placeholder="Type the Delivery Address"><br>
-                    <label class="a-4" for="">Date</label> <input type="date" name="Date" placeholder="octomber 22"
-                        required><br>
-                    <label class="a-5" for="">Contact No</label> <input type="text" name="con-num"
-                        placeholder="0725625637" required><br>
-                    <label class="a-6" for="">Total Amount</label> <input type="text" name="Total" placeholder="39,825"
-                        readonly value="33500"><br>
-                    <label class="a-7" for="">Comment</label> <input type="text" name="comment"
-                        placeholder="Type Special Instruction"> <br>
-                    <button class="a-8">Submit</button>
-                </form>
-                <div class="qq">
-                    <p>If you have any question about this purchase order, Please contact <br>
-                        Saman Perera , +94 768 9875 , samanp.fineline@gmail.com</p>
-                </div>
+      <!-- ```````````````````````````````````` page2 ````````````````````````````````````-->
+      <div class="page2" id="page2">
+        <h1 class="head-line">Purchase Order</h1>
+        <div class="details">
+            <p>Fineline (Pvt)Ltd <br>
+            Nawala Road, Nugegoda <br>
+            Phone : +94 112 5635 <br>
+            E-mail : fineline@gmail.com <br>
+            Website : www.fineline.com</p>
+        </div>
+        <form action="../server/order.php" method="post" class="form-1">
+        <label class="l-1" for="">Referance No</label> <input type="text" name="refnum" placeholder="REF0000"> <br>
+        <label class="l-2" for="">Site Name</label> <input type="text" name="sitename" placeholder="Type Site Name"> <br>
+        <label class="l-3" for="">Supplier</label> 
+        <Select name="supplier">
+            <option value="" disabled selected hidden>Select the Supplier</option>
+            <option value="">#######</option>
+            <option value="">#######</option>
+        </Select>
+        <h3 class="topic-1">Items</h3>
+        <div class="item-table">
+            <div class="item-name">
+                <h4>Item</h4>
+                <p>Cement</p>
+                <p>Cement</p>
             </div>
-            <!-- ```````````````````````````````````` page3 ````````````````````````````````````-->
-            <div class="page3" id="page3">
-                <h1 class="head-line">View Invoice</h1>
-                <div class="invoice">
-                    <table border="1" >
-                        <tr>
-                            <th>Ref Number</th>
-                            <th>Buyer Name</th>
-                            <th>Order Date</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
-                            <th>Update</th>
-                            <th>Update</th>
-                        </tr>
-                    </table>
-                </div>
-
-
-
+            <div class="item-q">
+                <h4>Qty</h4>
+                <p>5</p>
+                <p>5</p>
             </div>
-            <!-- ```````````````````````````````````` page4 ````````````````````````````````````-->
-            <div class="page4" id="page4">
-                <h1 class="head-line">Create Credit Note</h1>
-                <div class="note">
-                    <table border="1">
-                        <tr>
-                            <th>Ref Number</th>
-                            <th>Buyer Name</th>
-                            <th>Order Date</th>
-                            <th>Total Amount</th>
-                            <th>Status</th>
-                            <th>Update</th>
-                            <th>Update</th>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <!-- ```````````````````````````````````` page5 ````````````````````````````````````-->
-            <div class="page5" id="page5">
-                <h1 class="head-line">Procedure and policy</h1>
-
+            <div class="item-unitprice">
+                <h4>Unit Price(Rs)</h4>
+                <p>1100</p>
+                <p>1100</p>
             </div>
         </div>
+        <div class="add-btn">
+        <a href="../server/order.php"><img src="../img/add.png" alt=""></a>
+        <h5>Add Item</h5>
+        </div>
+        <label class="a-1" for="">Buyer</label> <input type="text" name="bname" placeholder="Type Buyer Name"> <br>
+        <label class="a-2" for="">E-mail</label> <input type="email" name="email" placeholder="fineline@gmail.com"><br>
+        <label  class="a-3" for="">Address</label> <input type="text" name="Address" placeholder="Type the Delivery Address"><br>
+        <label  class="a-4" for="">Date</label> <input type="date" name="Date" placeholder="octomber 22" required><br>
+        <label class="a-5" for="">Contact No</label> <input type="text" name="con-num" placeholder="0725625637" required><br>
+        <label class="a-6" for="">Total Amount</label> <input type="text" name="Total" placeholder="39,825" readonly value="33500"><br>
+        <label class="a-7" for="">Comment</label> <input type="text" name="comment" placeholder="Type Special Instruction" > <br>
+        <button class="a-8">Submit</button>
+        </form>
+        <div class="qq">
+        <p>If you have any question about this purchase order, Please contact <br>
+            Saman Perera , +94 768 9875 , samanp.fineline@gmail.com</p>
+        </div>
+      </div>
+      <!-- ```````````````````````````````````` page3 ````````````````````````````````````-->
+      <div class="page3" id="page3">
+        <h1 class="head-line">View Invoice</h1>
+      </div>
+      <!-- ```````````````````````````````````` page4 ````````````````````````````````````-->
+      <div class="page4" id="page4">
+        <h1 class="head-line">Create Credit Note</h1>
+      </div>
+      <!-- ```````````````````````````````````` page5 ````````````````````````````````````-->
+      <div class="page5" id="page5">
+        <h1 class="head-line">Procedure and policy</h1>
+        
+      </div>
     </div>
 </body>
 
