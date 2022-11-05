@@ -25,7 +25,7 @@ if (isset($_POST["btnsubmit"])) {
 		
 	
 		
-    header("Location:../client/home.html");
+    header("Location:../client/home.php");
 	} else {
     echo "Please enter correct usernamr and password";
 		 header("Location:../client/index.html");

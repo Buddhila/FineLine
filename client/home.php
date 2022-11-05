@@ -1,3 +1,4 @@
+<?php include_once('../server/Db.php') ?>
 <html>
     <head>
         <title>FineLine | Construction Company</title>
@@ -134,16 +135,63 @@
       </div>
       <div class="itemadd" id="itemadd">
         <h1>Add Item</h1>
+        
         <table>
             <tr>
                 <th>Item Name</th>
                 <th>Unit Price</th>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
+            
+            <?php
+
+            $sql =" SELECT * FROM `item` ";
+        
+            $result=mysqli_query($con,$sql);
+        
+            if(mysqli_num_rows($result)>0)
+            {
+                while($row = mysqli_fetch_assoc($result))
+                {
+                    echo"
+                    <tr>
+                <td>".$row["item_name"]."</td>
+                <td>".$row["unite_price"]."</td> 
+                </tr>";
+                }}
+                ?>
+            
+
+            
+        </table> 
+        <div class="form-1" >
+        <form action="../server/add_item.php" >
+                <label for="">item 1</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                    <br>
+                <label for="">item 2</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                <br>
+                <label for="">item 3</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                <br>
+                <label for="">item 4</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                <br>
+                <label for="">item 5</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                <br>
+                <label for="">item 6</label> <input type="text">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">unit price</label> <input type="text" name="" id="">&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="">Qty</label> <input type="number" min="1" >
+                <br>
+                <button name="btn-itm" class="btn-itm">Submit</button>
+            </form>
+            </div>
     </div>
       <!-- ```````````````````````````````````` page3 ````````````````````````````````````-->
       <div class="page3" id="page3">
