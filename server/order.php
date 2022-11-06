@@ -19,10 +19,15 @@ include_once './Db.php';
 					$sql="INSERT INTO `order`(`refnumber`, `site_name`, `supplier`, `buyer`, `email`, `address`, `date`, `contact`, `total`, `comment`) 
                     VALUES ('".$ref."','".$sitename."','".$supplier."','".$buyer."','".$email."','".$Address."','".$Date."','".$contat."','".$total."','".$comment."');";
 
+					
+
 					if(mysqli_query($con,$sql))
 					{
+						$sql2="DELETE FROM `tempery_item`";
+						mysqli_query($con,$sql2);
+
 						echo "file updated Sucessfully";
-					  	header('location:../client/home.html');
+					  	header('location:../client/home.php');
 					} else {
 						echo (mysqli_error($con));
 					}

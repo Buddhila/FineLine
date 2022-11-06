@@ -3,16 +3,14 @@
 include_once './Db.php';
 
 
-	$Cname =$_POST["txtname"];
-	$discription = $_POST["txtdiscription"];
-	$benifit =$_POST["txtB-st"];
-	$timeDuration = $_POST["txttime"];
-	$coverarea =$_POST["txtcoverarea"];
-	$cost = $_POST["txtcost"];
+	$itemName =$_POST["itemName"];
+	$itemPrice = $_POST["itemPrice"];
+	$qty =$_POST["qty"];
+	
 
 
-					$sql="INSERT INTO `createcourse`( `Course_Name`, `discription`, `covering_area`, `benifit`, `cost`, `time_duration`, `publish`, `L-id`)
-                     VALUES ('".$Cname."','".$discription."','".$coverarea."','".$benifit."','".$cost."','".$timeDuration."',0,'".$_SESSION["txtLid"]."');";
+	              $sql=   "INSERT INTO `tempery_item`(`item_name`, `unit`, `quntity`) VALUES ('".$itemName."','".$itemPrice."','".$qty."')";
+                     
 
 					if(mysqli_query($con,$sql))
 					{
